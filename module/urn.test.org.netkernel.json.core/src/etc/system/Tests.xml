@@ -1,0 +1,9 @@
+<tests>
+  <test>
+    <id>urn:test:org:netkernel:json:core</id>
+    <name>JSON Tests</name>
+    <desc>Tests JSON Core module</desc>
+    <uri>res:/test/testlist.xml</uri>
+    <icon></icon>
+  </test>
+</tests>

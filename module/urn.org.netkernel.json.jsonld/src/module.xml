@@ -1,0 +1,26 @@
+<module version="2.0">
+	<meta>
+		<identity>
+			<uri>urn:org:netkernel:json:jsonld</uri>
+			<version>1.1.1</version>
+		</identity>
+		<info>
+			<name>JSON / JSONLD</name>
+			<description>A JSONLD resource model</description>
+		</info>
+	</meta>
+	<system>
+	</system>
+	<rootspace>
+		<accessor>
+			<id>json.JSONLDCompact</id>
+			<grammar>
+				<active>
+					<identifier>active:JSONLDCompact</identifier>
+					<argument name="operand" desc="input JSONLD document"/>
+				</active>
+			</grammar>
+			<class>org.netkernel.json.jsonld.endpoint.JSONLDCompact</class>
+		</accessor>
+	</rootspace>
+</module>

@@ -1,0 +1,17 @@
+apply plugin: 'netkernel'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+buildscript {
+	  apply from: '../../common/common-build.gradle', to: buildscript
+}
+
+dependencies {
+	compile group: 'urn.org.netkernel', name: 'mod.hds', version: '[1.1.1,)'
+}
+
+netkernel {
+    useMavenCentral()
+    useMavenNK()
+    useStandardCompileDependencies()	//This provides core NK libs to all builds
+}

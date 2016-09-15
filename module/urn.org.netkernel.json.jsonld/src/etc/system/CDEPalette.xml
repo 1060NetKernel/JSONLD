@@ -1,0 +1,8 @@
+<palette>
+	<group id="json" name="JSON"/>
+	<endpoint id="json.JSONFromXML" name="JSON From XML" group="json"/>
+	<endpoint id="json.JSONFromHDS" name="JSON From HDS" group="json"/>
+	<endpoint id="json.JSONFromCSV" name="JSON From CSV" group="json"/>
+	<endpoint id="json.JSONToXML" name="JSON To XML" group="json"/>
+	<endpoint id="json.JSONToHDS" name="JSON To HDS" group="json"/>
+</palette>
