@@ -1,0 +1,43 @@
+import groovy.json.JsonSlurper
+import groovy.xml.MarkupBuilder
+
+results = context.source("arg:operand", String.class)
+
+def slurper = new JsonSlurper()
+def parsed = slurper.parseText(results)
+
+// Replace HTTP references to actual links
+
+results = results.replaceAll(/\"(http:\/\/.*)\"/) { all, url ->
+   "\"<a href=\"$url\">$url</a>\""
+}
+
+// Replace any $ references with the HTML entity
+
+if(results =~ /\$/) {
+  results = results.replaceAll(/\$/, '&#36;')
+}
+
+def sw = new StringWriter()
+def mb = new MarkupBuilder(sw)
+mb.setDoubleQuotes(true)
+
+mb.sed {
+  pattern {
+    regex "@@ID@@"
+    replace parsed.'id'
+  }
+
+  pattern {
+    regex "@@TABLE@@"
+    replace results
+  }
+}
+
+req=context.createRequest("active:sed");
+req.addArgument("operand", "res:/resources/template/jsonld-template.html");
+req.addArgumentByValue("operator", sw.toString());
+resp = context.issueRequest(req)
+
+resp = context.createResponseFrom(resp)
+resp.setMimeType("text/html")
