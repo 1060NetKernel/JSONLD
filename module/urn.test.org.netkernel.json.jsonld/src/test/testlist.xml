@@ -45,4 +45,44 @@
 }]]></stringEquals>
 		</assert>
 	</test>
+	<test name="active:JSONLDExpand - test0001">
+		<request>
+			<identifier>active:JSONLDExpand</identifier>
+			<argument name="operand">res:/test/jsonld/expand-0001-in.jsonld</argument>
+		</request>
+		<assert>
+			<notNull/>
+			<mimetype>application/ld+json</mimetype>
+		</assert>
+	</test>
+	<test name="active:JSONLDExpand - test0002">
+		<request>
+			<identifier>active:JSONLDExpand</identifier>
+			<argument name="operand">res:/test/jsonld/expand-0002-in.jsonld</argument>
+		</request>
+		<assert>
+			<notNull/>
+			<mimetype>application/ld+json</mimetype>
+		</assert>
+	</test>
+	<test name="active:JSONLDFlatten - test0001">
+		<request>
+			<identifier>active:JSONLDFlatten</identifier>
+			<argument name="operand">res:/test/jsonld/flatten-0001-in.jsonld</argument>
+		</request>
+		<assert>
+			<notNull/>
+			<mimetype>application/ld+json</mimetype>
+		</assert>
+	</test>
+	<test name="active:JSONLDFlatten - test0002">
+		<request>
+			<identifier>active:JSONLDFlatten</identifier>
+			<argument name="operand">res:/test/jsonld/flatten-0002-in.jsonld</argument>
+		</request>
+		<assert>
+			<notNull/>
+			<mimetype>application/ld+json</mimetype>
+		</assert>
+	</test>
 </testlist>
