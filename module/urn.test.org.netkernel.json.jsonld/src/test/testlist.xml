@@ -85,4 +85,29 @@
 			<mimetype>application/ld+json</mimetype>
 		</assert>
 	</test>
+	<test name="active:JsonLDToHTML - test0002">
+		<request>
+			<identifier>active:JsonLDToHTML</identifier>
+			<argument name="operand">res:/test/jsonld/flatten-0002-in.jsonld</argument>
+		</request>
+		<assert>
+			<notNull/>
+			<mimetype>text/html</mimetype>
+		</assert>
+	</test>
+	<test name="active:JsonLDToHTML - recursive">
+		<request>
+			<identifier>active:JsonLDToHTML</identifier>
+			<argument name="operand">
+				<request>
+					<identifier>active:JSONLDExpand</identifier>
+					<argument name="operand">res:/test/jsonld/expand-0002-in.jsonld</argument>
+				</request>
+			</argument>
+		</request>
+		<assert>
+			<notNull/>
+			<mimetype>text/html</mimetype>
+		</assert>
+	</test>
 </testlist>
