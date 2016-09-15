@@ -3,10 +3,46 @@
 		<request>
 			<identifier>active:JSONLDCompact</identifier>
 			<argument name="operand">res:/test/jsonld/compact-0001-in.jsonld</argument>
+			<argument name="operator">res:/test/jsonld/compact-0001-context.jsonld</argument>
 		</request>
 		<assert>
 			<notNull/>
 			<mimetype>application/ld+json</mimetype>
+		</assert>
+	</test>
+	<test name="active:JSONLDCompact - test0002">
+		<request>
+			<identifier>active:JSONLDCompact</identifier>
+			<argument name="operand">res:/test/jsonld/compact-0002-in.jsonld</argument>
+			<argument name="operator">res:/test/jsonld/compact-0002-context.jsonld</argument>
+		</request>
+		<assert>
+			<notNull/>
+			<mimetype>application/ld+json</mimetype>
+			<stringEquals><![CDATA[{
+  "@id" : "http://example.com/id1",
+  "@type" : "t1",
+  "term1" : "v1",
+  "term2" : {
+    "@type" : "t2",
+    "@value" : "v2"
+  },
+  "term3" : {
+    "@language" : "en",
+    "@value" : "v3"
+  },
+  "term4" : 4,
+  "term5" : [ 50, 51 ],
+  "@context" : {
+    "t1" : "http://example.com/t1",
+    "t2" : "http://example.com/t2",
+    "term1" : "http://example.com/term1",
+    "term2" : "http://example.com/term2",
+    "term3" : "http://example.com/term3",
+    "term4" : "http://example.com/term4",
+    "term5" : "http://example.com/term5"
+  }
+}]]></stringEquals>
 		</assert>
 	</test>
 </testlist>

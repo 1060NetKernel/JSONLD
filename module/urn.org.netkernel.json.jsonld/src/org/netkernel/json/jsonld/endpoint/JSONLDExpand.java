@@ -18,9 +18,9 @@ import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.core.JsonLdProcessor;
 import com.github.jsonldjava.utils.JsonUtils;
 
-public class JSONLDCompact extends StandardAccessorImpl
+public class JSONLDExpand extends StandardAccessorImpl
 {
-	public JSONLDCompact()
+	public JSONLDExpand()
 	{	//this.declareThreadSafe();
 		//declareSourceRepresentation(JSONObject.class);
 	}
@@ -30,16 +30,14 @@ public class JSONLDCompact extends StandardAccessorImpl
 		//1. What do you want?  Look at the request
 		//2. What do need?
 		IReadableBinaryStreamRepresentation opd=aContext.source("arg:operand", IReadableBinaryStreamRepresentation.class);
-		IReadableBinaryStreamRepresentation opt=aContext.source("arg:operator", IReadableBinaryStreamRepresentation.class);
 		
 		//3. Add value - Steal the underpants
 		Object jsonObject = JsonUtils.fromInputStream(opd.getInputStream());
-		Object ctxObject = JsonUtils.fromInputStream(opt.getInputStream());
 		JsonLdOptions options = new JsonLdOptions();
-		Object compact = JsonLdProcessor.compact(jsonObject, ctxObject, options);
+		Object expand = JsonLdProcessor.expand(jsonObject, options);
 		
 		//4 Issue response
-		INKFResponse resp=aContext.createResponseFrom(JsonUtils.toPrettyString(compact));
+		INKFResponse resp=aContext.createResponseFrom(JsonUtils.toPrettyString(expand));
 		
 		//5. Add metadata 
 		resp.setMimeType("application/ld+json");
