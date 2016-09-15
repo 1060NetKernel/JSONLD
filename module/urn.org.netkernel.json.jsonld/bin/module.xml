@@ -14,14 +14,35 @@
 	</system>
 	<rootspace>
 		<accessor>
-			<id>json.JSONLDCompact</id>
+			<id>jsonld.JSONLDCompact</id>
 			<grammar>
 				<active>
 					<identifier>active:JSONLDCompact</identifier>
-					<argument name="operand" desc="input JSONLD document"/>
+					<argument name="operand" desc="JSONLD document"/>
+					<argument name="operator" desc="context JSONLD document"/>
 				</active>
 			</grammar>
 			<class>org.netkernel.json.jsonld.endpoint.JSONLDCompact</class>
+		</accessor>
+		<accessor>
+			<id>jsonld.JSONLDExpand</id>
+			<grammar>
+				<active>
+					<identifier>active:JSONLDExpand</identifier>
+					<argument name="operand" desc="JSONLD document"/>
+				</active>
+			</grammar>
+			<class>org.netkernel.json.jsonld.endpoint.JSONLDExpand</class>
+		</accessor>
+		<accessor>
+			<id>jsonld.JSONLDFlatten</id>
+			<grammar>
+				<active>
+					<identifier>active:JSONLDFlatten</identifier>
+					<argument name="operand" desc="JSONLD document"/>
+				</active>
+			</grammar>
+			<class>org.netkernel.json.jsonld.endpoint.JSONLDFlatten</class>
 		</accessor>
 	</rootspace>
 </module>
