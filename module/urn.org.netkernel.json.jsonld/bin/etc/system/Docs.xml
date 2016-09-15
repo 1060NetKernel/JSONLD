@@ -1,0 +1,82 @@
+<docs>
+  
+  <doc>
+    <id>doc:json:core:title</id>
+    <title>JSON Core</title>
+    <desc>Documentation of the JSON core library</desc>
+    <uri>res:/org/netkernel/json/core/doc/title.txt</uri>
+  </doc>
+  
+  <doc>
+    <id>doc:json:core:JSONToXML</id>
+    <title>active:JSONToXML</title>
+    <desc>Converts JSON to XML</desc>
+    <uri>res:/org/netkernel/json/core/doc/JSONToXML.txt</uri>
+    <category>doc accessor</category>
+  </doc>
+  
+  <doc>
+    <id>doc:json:core:JSONFromXML</id>
+    <title>active:JSONFromXML</title>
+    <desc>Converts to JSON from an XML form</desc>
+    <uri>res:/org/netkernel/json/core/doc/JSONFromXML.txt</uri>
+    <category>doc accessor</category>
+  </doc>
+  
+  <doc>
+    <id>doc:json:core:JSONFromCSV</id>
+    <title>active:JSONFromCSV</title>
+    <desc>Converts to JSON from an CSV form</desc>
+    <uri>res:/org/netkernel/json/core/doc/JSONFromCSV.txt</uri>
+    <category>doc accessor</category>
+  </doc>
+  
+  <doc>
+    <id>doc:json:core:JSONFromHDS</id>
+    <title>active:JSONFromHDS</title>
+    <desc>Converts to JSON from a HDS document</desc>
+    <uri>res:/org/netkernel/json/core/doc/JSONFromHDS.txt</uri>
+    <category>doc accessor</category>
+  </doc>
+  
+  <doc>
+    <id>doc:json:core:JSONToHDS</id>
+    <title>active:JSONToHDS</title>
+    <desc>Converts JSON to HDS</desc>
+    <uri>res:/org/netkernel/json/core/doc/JSONToHDS.txt</uri>
+    <category>doc accessor</category>
+  </doc>
+  
+
+  <doc>
+    <id>doc:json:core:JSONParser</id>
+    <title>JSON Parser</title>
+    <desc>JSON parser transreptor</desc>
+    <uri>res:/org/netkernel/json/core/doc/JSONParser.txt</uri>
+    <category>doc transreptor</category>
+  </doc>
+  
+  <doc>
+    <id>doc:json:core:JSONSerializer</id>
+    <title>JSON Serializer</title>
+    <desc>JSON serializer transreptor</desc>
+    <uri>res:/org/netkernel/json/core/doc/JSONSerializer.txt</uri>
+    <category>doc transreptor</category>
+  </doc>
+  
+  <doc>
+    <id>doc:json:core:JSONObject</id>
+    <title>JSONObject</title>
+    <desc>JSON Representation</desc>
+    <uri>res:/org/netkernel/json/core/doc/JSONObject.txt</uri>
+    <category>doc representation</category>
+  </doc>
+  
+  <doc>
+    <id>doc:json:core:license</id>
+    <title>License</title>
+    <desc>License information for JSON core library</desc>
+    <uri>res:/org/netkernel/json/core/doc/license.txt</uri>
+  </doc>
+
+</docs>

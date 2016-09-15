@@ -1,0 +1,12 @@
+<testlist>
+	<test name="active:JSONLDCompact">
+		<request>
+			<identifier>active:JSONLDCompact</identifier>
+			<argument name="operand">res:/test/jsonld/compact-0001-in.jsonld</argument>
+		</request>
+		<assert>
+			<notNull/>
+			<mimetype>application/ld+json</mimetype>
+		</assert>
+	</test>
+</testlist>

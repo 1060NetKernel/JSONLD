@@ -1,0 +1,9 @@
+<tests>
+  <test>
+    <id>urn:test:org:netkernel:json:jsonld</id>
+    <name>JSONLD Tests</name>
+    <desc>Tests JSONLD module</desc>
+    <uri>res:/test/testlist.xml</uri>
+    <icon></icon>
+  </test>
+</tests>

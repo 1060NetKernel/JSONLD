@@ -10,5 +10,21 @@
 	<classpathentry kind="lib" path="/home/pjr/.gradle/caches/modules-2/files-2.1/urn.com.ten60.core/cache.se/1.6.11/b775c92b5df25cffc6af15ba05b6e13b0e92bfde/cache.se-1.6.11.jar"/>
 	<classpathentry kind="lib" path="/home/pjr/.gradle/caches/modules-2/files-2.1/urn.org.netkernel/ext.layer1/1.57.26/f0736f9eacc0f4fae934fe588c8902932b5153/ext.layer1-1.57.26.jar"/>
 	<classpathentry kind="lib" path="/home/pjr/.gradle/caches/modules-2/files-2.1/urn.org.netkernel.expanded.lib/urn.org.netkernel.mod.hds-1.1.1___commons-jxpath-1.3/1.1.1/c22d7d0f0f40eb7059a23cfa61773a416768b137/urn.org.netkernel.mod.hds-1.1.1___commons-jxpath-1.3-1.1.1.jar"/>
+	<classpathentry kind="lib" path="src/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="src/lib/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="src/lib/fluent-hc-4.5.2.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpclient-cache-4.5.2.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpclient-osgi-4.5.2.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpcore-nio-4.4.4.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpcore-osgi-4.4.4.jar"/>
+	<classpathentry kind="lib" path="src/lib/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="src/lib/jackson-annotations-2.7.4.jar"/>
+	<classpathentry kind="lib" path="src/lib/jackson-core-2.7.4.jar"/>
+	<classpathentry kind="lib" path="src/lib/jackson-databind-2.7.4.jar"/>
+	<classpathentry kind="lib" path="src/lib/jcl-over-slf4j-1.7.9.jar"/>
+	<classpathentry kind="lib" path="src/lib/slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="lib" path="src/lib/jsonld-java-0.5.2-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

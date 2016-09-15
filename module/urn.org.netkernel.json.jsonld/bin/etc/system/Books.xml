@@ -1,0 +1,30 @@
+<books>
+  <book>
+    <id>book:json:core</id>
+    <title>JSON / Core</title>
+    <desc>Documentation for the JSON core library</desc>
+    <author/>
+    <publisher/>
+    <date/>
+    <modified/>
+    <icon/>
+    <keywords/>
+    <toc>
+      <item id="doc:json:core:title">
+      	<item id="doc:json:core:JSONFromXML"/>
+      	<item id="doc:json:core:JSONFromHDS"/>
+      	<item id="doc:json:core:JSONFromCSV"/>
+      	<separator/>
+      	<item id="doc:json:core:JSONToXML"/>
+      	<item id="doc:json:core:JSONToHDS"/>
+      	<separator/>
+      	<item id="doc:json:core:JSONParser"/>
+      	<item id="doc:json:core:JSONSerializer"/>
+      	<separator/>
+      	<item id="doc:json:core:JSONObject"/>
+      	<separator/>
+      	<item id="doc:json:core:license"/>
+      </item>
+    </toc>
+  </book>
+</books>
