@@ -8,6 +8,7 @@ package org.netkernel.json.jsonld.endpoint;
 
 import java.util.HashMap;
 
+import org.netkernel.json.jsonld.util.ContextDocumentLoader;
 import org.netkernel.layer0.meta.impl.SourcedArgumentMetaImpl;
 import org.netkernel.layer0.nkf.INKFRequestContext;
 import org.netkernel.layer0.nkf.INKFResponse;
@@ -34,6 +35,7 @@ public class JSONLDFlatten extends StandardAccessorImpl
 		//3. Add value - Steal the underpants
 		Object jsonObject = JsonUtils.fromInputStream(opd.getInputStream());
 		JsonLdOptions options = new JsonLdOptions();
+		options.setDocumentLoader(new ContextDocumentLoader(aContext));
 		Object flatten = JsonLdProcessor.flatten(jsonObject, options);
 		
 		//4 Issue response

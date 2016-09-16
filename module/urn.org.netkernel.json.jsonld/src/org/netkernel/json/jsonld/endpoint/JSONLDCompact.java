@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.HashMap;
 
 import org.apache.http.client.HttpClient;
+import org.netkernel.json.jsonld.util.ContextDocumentLoader;
 import org.netkernel.layer0.meta.impl.SourcedArgumentMetaImpl;
 import org.netkernel.layer0.nkf.INKFRequestContext;
 import org.netkernel.layer0.nkf.INKFResponse;
@@ -44,6 +45,7 @@ public class JSONLDCompact extends StandardAccessorImpl
 		Object jsonObject = JsonUtils.fromInputStream(opd.getInputStream());
 		Object ctxObject = JsonUtils.fromInputStream(opt.getInputStream());
 		JsonLdOptions options = new JsonLdOptions();
+		options.setDocumentLoader(new ContextDocumentLoader(aContext));
 		Object compact = JsonLdProcessor.compact(jsonObject, ctxObject, options);
 		
 		
@@ -52,45 +54,5 @@ public class JSONLDCompact extends StandardAccessorImpl
 		
 		//5. Add metadata 
 		resp.setMimeType("application/ld+json");
-	}
-	
-	class MyDL extends DocumentLoader
-	{
-
-		@Override
-		public Object fromURL(URL arg0) throws JsonParseException, IOException
-		{
-			// TODO Auto-generated method stub
-			return super.fromURL(arg0);
-		}
-
-		@Override
-		public HttpClient getHttpClient()
-		{
-			// TODO Auto-generated method stub
-			return super.getHttpClient();
-		}
-
-		@Override
-		public RemoteDocument loadDocument(String arg0) throws JsonLdError
-		{
-			// TODO Auto-generated method stub
-			return super.loadDocument(arg0);
-		}
-
-		@Override
-		public InputStream openStreamFromURL(URL url) throws IOException
-		{
-			// TODO Auto-generated method stub
-			return super.openStreamFromURL(url);
-		}
-
-		@Override
-		public void setHttpClient(HttpClient nextHttpClient)
-		{
-			// TODO Auto-generated method stub
-			super.setHttpClient(nextHttpClient);
-		}
-		
-	}
+	}	
 }
